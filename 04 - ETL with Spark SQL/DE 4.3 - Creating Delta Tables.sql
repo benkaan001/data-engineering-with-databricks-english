@@ -157,7 +157,7 @@ SELECT * FROM purchases_vw
 
 CREATE OR REPLACE TABLE purchase_dates (
   id STRING, 
-  transaction_timestamp LONG, 
+  transaction_timestamp STRING, 
   price STRING,
   date DATE GENERATED ALWAYS AS (
     cast(cast(transaction_timestamp/1e6 AS TIMESTAMP) AS DATE))
